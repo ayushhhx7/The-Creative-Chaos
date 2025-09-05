@@ -98,15 +98,29 @@
     </div>
   </section>
 
-  <section id="contact">
-    <h2>Let’s Talk</h2>
-    <form id="contact-form">
-      <input type="text" placeholder="Your Name 😊" required>
-      <input type="email" placeholder="Your Email 📧" required>
-      <textarea placeholder="Your Message ✍️"></textarea>
-      <button type="submit">Send 🚀</button>
-    </form>
-  </section>
+<!-- Contact Section -->
+<section id="contact">
+  <h2>Let’s Talk</h2>
+
+  <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thanks.html" class="contact-form">
+    <!-- Hidden form name -->
+    <input type="hidden" name="form-name" value="contact" />
+
+    <!-- Honeypot (spam protection) -->
+    <p class="hidden" aria-hidden="true">
+      <label>Don’t fill this out: <input name="bot-field" /></label>
+    </p>
+
+    <!-- Fields -->
+    <input type="text" name="name" placeholder="Your Name 😊" required />
+    <input type="email" name="email" placeholder="Your Email 📧" required />
+    <textarea name="message" rows="4" placeholder="Your Message ✍️" required></textarea>
+
+    <button type="submit" class="btn-submit">Send 🚀</button>
+  </form>
+</section>
+
+
 
   <footer>
     <p>© 2025 Creative Chaosss | Made with 💫 Chaos</p>

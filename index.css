@@ -344,3 +344,66 @@ footer {
   margin-top: 10px;
   font-weight: bold;
 }
+
+.hidden {
+  display: none !important;
+}
+
+/* Contact Section */
+#contact {
+  text-align: center;
+  padding: 4rem 1rem;
+  background: #fafafa;
+}
+
+#contact h2 {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+}
+
+.contact-form {
+  max-width: 400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.9rem 1rem;
+  border: 1.5px solid #ddd;
+  border-radius: 12px;
+  font-size: 1rem;
+  outline: none;
+  transition: border 0.2s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #ff00cc;
+  box-shadow: 0 0 6px rgba(255, 0, 204, 0.3);
+}
+
+.btn-submit {
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(90deg, #ff00cc, #3333ff);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-submit:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Hide spam field */
+.hidden {
+  display: none !important;
+}
