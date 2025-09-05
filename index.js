@@ -77,3 +77,16 @@ function eraseEffect() {
 }
 
 document.addEventListener("DOMContentLoaded", typeEffect);
+
+if (window.innerWidth > 768) {
+  document.querySelectorAll("#portfolio video").forEach(video => {
+    video.addEventListener("mouseenter", () => {
+      video.muted = true;
+      video.play();
+    });
+    video.addEventListener("mouseleave", () => {
+      video.pause();
+      video.currentTime = 0;
+    });
+  });
+}
