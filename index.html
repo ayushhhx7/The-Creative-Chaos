@@ -8,19 +8,20 @@
 </head>
 <body>
   <!-- Hero Section -->
-<section id="hero">
-  <div class="hero-content">
-    <img src="images/your-photo.jpg" alt="Profile" class="hero-img">
-    <h1>Hi, I'm <span>The Creative Chaoss</span></h1>
-    <h2 id="typing"></h2>
-    <p>Creating vibes, one reel at a time ✨</p>
-    <div class="hero-buttons">
-      <a href="#portfolio" class="btn">🎥 Watch My Reels</a>
-      <a href="#contact" class="btn btn-alt">💌 DM for Collab</a>
+  <section id="hero">
+    <div class="hero-content">
+      <img src="images/your-photo.jpg" alt="Profile" class="hero-img">
+      <h1>Hi, I'm <span>The Creative Chaoss</span></h1>
+      <h2><span id="typed-text"></span></h2> <!-- ✅ fixed id -->
+      <p>Creating vibes, one reel at a time ✨</p>
+      <div class="hero-buttons">
+        <a href="#portfolio" class="btn">🎥 Watch My Reels</a>
+        <a href="#contact" class="btn btn-alt">💌 DM for Collab</a>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
+  <!-- About -->
   <section id="about">
     <div class="about-container">
       <div class="about-photo">
@@ -29,55 +30,50 @@
       <div class="about-text">
         <h2>About Me</h2>
         <p>📍 Kolkata | 🎥 Reel Creator | ✨ Content Maker</p>
-        <p>I’m the brainchild behind <b>Creative Chaosss</b>, 
-        turning moments into aesthetic vibes.</p>
+        <p>I’m the brainchild behind <b>Creative Chaosss</b>, turning moments into aesthetic vibes.</p>
       </div>
     </div>
   </section>
 
-<section id="portfolio">
-  <h2>Featured Reels</h2>
-  <div class="grid">
-
-    <div class="card">
-      <video controls muted playsinline poster="images/reel1.jpg">
-        <source src="images/anniversery.mp4" type="video/mp4">
-      </video>
-      <span>Event Reel</span>
+  <!-- Portfolio -->
+  <section id="portfolio">
+    <h2>Featured Reels</h2>
+    <div class="grid">
+      <div class="card">
+        <video controls muted playsinline poster="images/reel1.jpg">
+          <source src="images/anniversery.mp4" type="video/mp4">
+        </video>
+        <span>Event Reel</span>
+      </div>
+      <div class="card">
+        <video controls muted playsinline poster="images/reel2.jpg">
+          <source src="images/dailyvlog.mp4" type="video/mp4">
+        </video>
+        <span>Lifestyle</span>
+      </div>
+      <div class="card">
+        <video controls muted playsinline poster="images/reel3.jpg">
+          <source src="images/haldi.mp4" type="video/mp4">
+        </video>
+        <span>Collab</span>
+      </div>
+      <div class="card">
+        <video controls muted playsinline poster="images/reel4.jpg">
+          <source src="images/ipl.mp4" type="video/mp4">
+        </video>
+        <span>Aesthetic</span>
+      </div>
     </div>
+  </section>
 
-    <div class="card">
-      <video controls muted playsinline poster="images/reel2.jpg">
-        <source src="images/dailyvlog.mp4" type="video/mp4">
-      </video>
-      <span>Lifestyle</span>
-    </div>
+  <!-- Collab -->
+  <section id="collab">
+    <h2>Let’s Create Together 🚀</h2>
+    <p>Open to collaborations with brands, events & creators.</p>
+    <a href="#contact" class="btn">DM for Collab 💌</a>
+  </section>
 
-    <div class="card">
-      <video controls muted playsinline poster="images/reel3.jpg">
-        <source src="images/haldi.mp4" type="video/mp4">
-      </video>
-      <span>Collab</span>
-    </div>
-
-    <div class="card">
-      <video controls muted playsinline poster="images/reel4.jpg">
-        <source src="images/ipl.mp4" type="video/mp4">
-      </video>
-      <span>Aesthetic</span>
-    </div>
-
-  </div>
-</section>
-
-
-<section id="collab">
-  <h2>Let’s Create Together 🚀</h2>
-  <p>Open to collaborations with brands, events & creators.</p>
-  <a href="#contact" class="btn">DM for Collab 💌</a>
-</section>
-
-
+  <!-- Testimonials -->
   <section id="testimonials">
     <h2>What People Say</h2>
     <div class="testimonials-container">
@@ -87,6 +83,7 @@
     </div>
   </section>
 
+  <!-- Mood -->
   <section id="mood">
     <h2>Creative Vibes</h2>
     <div class="mood-grid">
@@ -98,29 +95,20 @@
     </div>
   </section>
 
-<!-- Contact Section -->
-<section id="contact">
-  <h2>Let’s Talk</h2>
-
-  <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thanks.html" class="contact-form">
-    <!-- Hidden form name -->
-    <input type="hidden" name="form-name" value="contact" />
-
-    <!-- Honeypot (spam protection) -->
-    <p class="hidden" aria-hidden="true">
-      <label>Don’t fill this out: <input name="bot-field" /></label>
-    </p>
-
-    <!-- Fields -->
-    <input type="text" name="name" placeholder="Your Name 😊" required />
-    <input type="email" name="email" placeholder="Your Email 📧" required />
-    <textarea name="message" rows="4" placeholder="Your Message ✍️" required></textarea>
-
-    <button type="submit" class="btn-submit">Send 🚀</button>
-  </form>
-</section>
-
-
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Let’s Talk</h2>
+    <form id="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thanks.html" class="contact-form">
+      <input type="hidden" name="form-name" value="contact" />
+      <p class="hidden" aria-hidden="true">
+        <label>Don’t fill this out: <input name="bot-field" /></label>
+      </p>
+      <input type="text" name="name" placeholder="Your Name 😊" required />
+      <input type="email" name="email" placeholder="Your Email 📧" required />
+      <textarea name="message" rows="4" placeholder="Your Message ✍️" required></textarea>
+      <button type="submit" class="btn-submit">Send 🚀</button>
+    </form>
+  </section>
 
   <footer>
     <p>© 2025 Creative Chaosss | Made with 💫 Chaos</p>
