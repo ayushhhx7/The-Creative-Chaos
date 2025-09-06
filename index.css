@@ -368,3 +368,145 @@ footer .social-links a:hover img {
 #portfolio .card.playing::after {
   opacity: 0 !important;
 }
+
+/* HERO SECTION with Animated Gradient */
+#hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+  background: linear-gradient(-45deg, #ff6a00, #ee0979, #8e2de2, #00c6ff);
+  background-size: 400% 400%;
+  animation: gradientMove 15s ease infinite;
+  color: white;
+  padding: 20px;
+}
+
+/* Animate gradient background */
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Profile Picture with Glowing Gradient Border */
+.hero-img {
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  padding: 5px; /* space for glow */
+  background: linear-gradient(135deg, #ff6a00, #ee0979, #8e2de2, #00c6ff);
+  background-size: 300% 300%;
+  animation: glowMove 8s ease infinite;
+  box-shadow: 0 0 25px rgba(255, 0, 255, 0.5);
+}
+
+/* Animate gradient glow around image */
+@keyframes glowMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.hero-img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 4px solid white; /* inner clean border */
+}
+
+/* ABOUT */
+#about {
+  padding: 80px 20px;
+  background: #fff;
+}
+
+#about h2 {
+  text-align: left;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  position: relative;
+  display: inline-block;
+  color: #333;
+}
+
+/* Underline animation for About Me heading */
+#about h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #ff6a00, #ee0979);
+  transition: width 0.4s ease;
+}
+
+#about h2:hover::after {
+  width: 100%;
+}
+
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: 0 auto;
+  animation: fadeUp 1.2s ease both;
+}
+
+/* Profile photo with glowing gradient border */
+.about-photo {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  padding: 5px;
+  background: linear-gradient(135deg, #ff6a00, #ee0979, #8e2de2, #00c6ff);
+  background-size: 300% 300%;
+  animation: glowMove 8s ease infinite;
+  box-shadow: 0 0 30px rgba(238, 9, 121, 0.5);
+  overflow: hidden;
+}
+
+.about-photo img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 4px solid white;
+  object-fit: cover;
+}
+
+/* About text styling */
+.about-text {
+  max-width: 550px;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #444;
+  animation: slideIn 1.5s ease both;
+}
+
+.about-text p {
+  margin-bottom: 15px;
+}
+
+.about-text b {
+  color: #ee0979;
+  background: linear-gradient(90deg, #ff6a00, #ee0979);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 600;
+}
+
+/* Animations */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
