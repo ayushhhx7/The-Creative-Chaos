@@ -336,3 +336,35 @@ footer {
 .hidden {
   display: none !important;
 }
+
+footer {
+  background: #111;
+  color: #ccc;
+  padding: 20px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+footer .social-links {
+  margin-top: 12px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+footer .social-links a img {
+  width: 28px;
+  height: 28px;
+  filter: brightness(0) invert(1); /* make icons white */
+  transition: transform 0.3s, filter 0.3s;
+}
+
+footer .social-links a:hover img {
+  transform: scale(1.2);
+  filter: brightness(1) invert(0) sepia(1) saturate(5) hue-rotate(320deg); /* pink/orange hover */
+}
+
+/* Hide overlay when video is playing */
+#portfolio .card.playing::after {
+  opacity: 0 !important;
+}

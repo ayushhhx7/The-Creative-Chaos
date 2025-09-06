@@ -77,3 +77,25 @@ function erase() {
 }
 
 document.addEventListener("DOMContentLoaded", typeWriter);
+
+// 🎥 Video hover autoplay (desktop only)
+document.querySelectorAll("#portfolio video").forEach(video => {
+  if (window.innerWidth > 768) {
+    // Desktop hover play
+    video.addEventListener("mouseenter", () => {
+      video.muted = true;
+      video.play();
+    });
+
+    video.addEventListener("mouseleave", () => {
+      video.pause();
+      video.currentTime = 0;
+    });
+  }
+
+  // 🔧 Mobile fix: hide "▶ Play" overlay when playing
+  const card = video.closest(".card");
+  video.addEventListener("play", () => card.classList.add("playing"));
+  video.addEventListener("pause", () => card.classList.remove("playing"));
+  video.addEventListener("ended", () => card.classList.remove("playing"));
+});
