@@ -99,3 +99,33 @@ document.querySelectorAll("#portfolio video").forEach(video => {
   video.addEventListener("pause", () => card.classList.remove("playing"));
   video.addEventListener("ended", () => card.classList.remove("playing"));
 });
+
+// Add to index.js
+const faders = document.querySelectorAll('.fade-in');
+
+function revealOnScroll() {
+  faders.forEach(el => {
+    const rect = el.getBoundingClientRect();
+    if (rect.top < window.innerHeight - 50) {
+      el.classList.add('visible');
+    }
+  });
+}
+
+window.addEventListener('scroll', revealOnScroll);
+document.addEventListener('DOMContentLoaded', revealOnScroll);
+
+// Add to index.js
+const scrollTopBtn = document.getElementById("scrollTopBtn");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 300) {
+    scrollTopBtn.style.display = "block";
+  } else {
+    scrollTopBtn.style.display = "none";
+  }
+});
+
+scrollTopBtn.addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
